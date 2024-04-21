@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <style>
+    h1 {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 50px;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    body {
+      background-color: lightblue;
+    }
+
+    .mydiv {
+      text-align: center;
+      margin: auto;
+      width: 50%;
+      border: 3px solid;
+      padding: 20px;
+      font-size: 20px;
+    }
+
+    .img {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      width: 30%;
+      padding: 10px;
+      border: 3px solid;
+      border-radius: 10px;
+    }
+
+    .select {
+      width: 150px;
+      height: 40px;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      width: 150px;
+      height: 40px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 id="one">Welcome to Hockey League</h1><br>
+    <img class="img img-fluid" src="https://img.freepik.com/premium-vector/ice-hockey-player-sport-with-puck-skates-ice-surface-game-championship-illustration_2175-8890.jpg"
+      alt="Hockey image"><br>
+    <div class="mydiv">
+      <form th:action="@{/viewFromIndex}" method="post">
+        <div class="form-group">
+          <label for="team">Select a team:</label>
+          <select class="form-control select" id="team" name="team">
+            <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+          </select>
+        </div><br>
+        <button type="submit" class="btn btn-success">View Team</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and Popper.js (required for Bootstrap JavaScript) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
